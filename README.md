@@ -1,8 +1,14 @@
 # Active Forks Browser extension
 
-This is the browser extension for [Active Forks](https://github.com/ridvanaltun/active-forks). It supports Chrome, Firefox and Edge, and adds an **Active Forks** button:
+> This is the browser extension for [Active Forks](https://github.com/ridvanaltun/active-forks).
 
- ![Active Forks](./docs/github-injected.png "Active Forks")
+It supports Chrome, Firefox and Edge.
+
+[<img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="for Firefox" height="50px">](https://addons.mozilla.org/en/firefox/addon/active-forks/)
+
+## Showcase
+
+![Active Forks](./docs/github-injected.png "Active Forks")
 
 ## Build
 
