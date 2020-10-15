@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "active-forks-web-extension",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Browser extension (Chrome/Firefox/Edge) for enhancing GitHub with Active Forks buttons",
+  "main": "src/activeforks.js",
+  "scripts": {
+    "build": "yarn clean && npx tsc && yarn webpack",
+    "build:safari": " xcrun safari-web-extension-converter . --app-name ActiveForks --bundle-identifier io.ridvanaltun.ActiveForks",
+    "package": "yarn clean:package && zip -rD --exclude='src/*.ts' active-forks.xpi dist/bundles icons src manifest.json",
+    "clean": "rimraf dist && yarn clean:package",
+    "clean:package": "rimraf active-forks.xpi",
+    "webpack": "webpack",
+    "watch": "webpack -w"
+  },
+  "dependencies": {
+    "@types/events": "^3.0.0",
+    "dom-loaded": "^2.0.0",
+    "github-injection": "^1.0.1",
+    "select-dom": "^5.1.0",
+    "webextension-polyfill": "^0.5.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^1.1.1",
+    "style-loader": "^1.0.0",
+    "webextension-polyfill-ts": "^0.11.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
