@@ -6,6 +6,7 @@ It supports Chrome, Firefox and Edge.
 
 [<img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="for Firefox" height="50px">](https://addons.mozilla.org/en/firefox/addon/active-forks/)
 [<img src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png" alt="for Chrome" height="50px">](https://chrome.google.com/webstore/detail/active-forks/kicchcnkocbmnmlpmjoojinofkagcjpi)
+[<img src="./docs/edge-market.png" alt="for Microsoft Edge" height="50px">](https://microsoftedge.microsoft.com/addons/detail/active-forks/bpjmkkjkcligjfbanmjnlkjffalbehpb)
 
 ## Showcase
 
