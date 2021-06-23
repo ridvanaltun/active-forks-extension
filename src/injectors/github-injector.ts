@@ -19,11 +19,11 @@ namespace ActiveForksdify {
 export class GitHubInjector extends InjectorBase {
   constructor(configProvider: ConfigProvider) {
     super(configProvider, [
-      new PullInjector(),
-      new IssueInjector(),
-      new FileInjector(),
+      // new PullInjector(),
+      // new IssueInjector(),
+      // new FileInjector(),
       new NavigationInjector(),
-      new EmptyRepositoryInjector(),
+      // new EmptyRepositoryInjector(),
     ]);
   }
 
@@ -152,39 +152,39 @@ abstract class ButtonInjectorBase implements ButtonInjector {
   }
 }
 
-class PullInjector extends ButtonInjectorBase {
-  constructor() {
-    super(".gh-header-actions", "");
-  }
+// class PullInjector extends ButtonInjectorBase {
+//   constructor() {
+//     super(".gh-header-actions", "");
+//   }
+//
+//   isApplicableToCurrentPage(): boolean {
+//     return window.location.pathname.includes("/pull/");
+//   }
+// }
 
-  isApplicableToCurrentPage(): boolean {
-    return window.location.pathname.includes("/pull/");
-  }
-}
+// class IssueInjector extends ButtonInjectorBase {
+//   constructor() {
+//     super(".gh-header-actions", "");
+//   }
+//
+//   isApplicableToCurrentPage(): boolean {
+//     return window.location.pathname.includes("/issues/");
+//   }
+// }
 
-class IssueInjector extends ButtonInjectorBase {
-  constructor() {
-    super(".gh-header-actions", "");
-  }
-
-  isApplicableToCurrentPage(): boolean {
-    return window.location.pathname.includes("/issues/");
-  }
-}
-
-class FileInjector extends ButtonInjectorBase {
-  constructor() {
-    super(".repository-content > div", "active-forks-file-btn");
-  }
-
-  protected adjustButton(a: HTMLAnchorElement): void {
-    a.className = "btn btn-primary";
-  }
-
-  isApplicableToCurrentPage(): boolean {
-    return window.location.pathname.includes("/blob/");
-  }
-}
+// class FileInjector extends ButtonInjectorBase {
+//   constructor() {
+//     super(".repository-content > div", "active-forks-file-btn");
+//   }
+//
+//   protected adjustButton(a: HTMLAnchorElement): void {
+//     a.className = "btn btn-primary";
+//   }
+//
+//   isApplicableToCurrentPage(): boolean {
+//     return window.location.pathname.includes("/blob/");
+//   }
+// }
 
 class NavigationInjector extends ButtonInjectorBase {
   constructor() {
@@ -200,21 +200,21 @@ class NavigationInjector extends ButtonInjectorBase {
   }
 }
 
-class EmptyRepositoryInjector extends ButtonInjectorBase {
-  constructor() {
-    super(
-      ".repository-content",
-      ActiveForksdify.CSS_REF_NO_CONTAINER,
-      false,
-      true
-    );
-  }
-
-  protected adjustButton(a: HTMLAnchorElement): void {
-    a.className = "btn btn-primary";
-  }
-
-  isApplicableToCurrentPage(): boolean {
-    return !!select.exists("#empty-setup-clone-url");
-  }
-}
+// class EmptyRepositoryInjector extends ButtonInjectorBase {
+//   constructor() {
+//     super(
+//       ".repository-content",
+//       ActiveForksdify.CSS_REF_NO_CONTAINER,
+//       false,
+//       true
+//     );
+//   }
+//
+//   protected adjustButton(a: HTMLAnchorElement): void {
+//     a.className = "btn btn-primary";
+//   }
+//
+//   isApplicableToCurrentPage(): boolean {
+//     return !!select.exists("#empty-setup-clone-url");
+//   }
+// }
