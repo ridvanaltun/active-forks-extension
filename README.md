@@ -10,7 +10,7 @@ It supports Chrome, Firefox and Edge.
 
 ## Showcase
 
-![Active Forks](./docs/github-injected.png "Active Forks")
+![Active Forks](./docs/github-injected.jpg "Active Forks")
 
 ## Build
 
